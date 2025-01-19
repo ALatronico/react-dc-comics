@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", serif;
+}
+
+
+ul {
+  list-style: none;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+/***UTILITIES***/
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0
+}
+
+.d-flex {
+  display: flex;
+}
+
+.f-bold {
+  font-weight: bold;
+}
+
+.f-primary {
+  color: #057FF7
+}
+
+
+/***HEADER***/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+
+}
+
+header nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+
+}
+
+header ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+header ul li {
+  margin-right: 25px;
+  height: 100%;
+}
+
+header ul li a {
+  color: #7B6658;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+header ul li:hover a {
+  color: #0282F9;
+  border-bottom: solid 5px #0282F9;
+
+}
+
+
+header img {
+  width: 90px;
+}
+
+/***MAIN***/
+
+main {
+  background-color: #1C1C1C;
+  color: white;
+  padding: 30px 0;
+}
+
+
+/***FOOTER***/
+
+
+footer h3 {
+  color: white;
+  font-size: 0.9rem;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+footer li {
+  padding: 0px;
+}
+
+footer li a {
+  color: #959595;
+  font-size: 0.6rem;
+}
+
+#merchandise {
+  background: #0282F9;
+  padding: 20px 0;
+}
+
+section#merchandise div.container {
+  justify-content: space-Around;
+  align-items: center;
+  padding: 30px 0;
+}
+
+section#merchandise div.container span {
+  color: white;
+  margin-left: -60px;
+  font-size: 0.8rem;
+}
+
+#footer-menu {
+  display: flex;
+  max-height: 370px;
+  padding: 0;
+  justify-content: space-between;
+  min-width: 1200px;
+}
+
+
+#menu {
+  background-image: url(../src/assets/img/footer-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+footer section#merchandise img {
+  width: 55px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.left-footer .footer-col {
+  padding-top: 20px;
+  padding-right: 40px;
+}
+
+.footer-col-dc {
+  overflow: hidden;
+}
+
+.footer-col-dc img {
+  position: relative;
+  top: -94px;
+}
+
+#cta {
+  background-color: #303030;
+}
+
+#cta .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cta div.footer-col ul {
+  justify-content: center;
+  align-items: center;
+}
+
+#cta div.footer-col li {
+  padding: 10px 10px;
+  vertical-align: middle;
+}
+
+#cta div.footer-col li:not(:first-child) {
+  position: relative;
+  bottom: -2px;
+}
+
+#cta div.footer-col li a h3 {
+  color: #0282F9;
+}
+
+.sign-up h3 {
+  border: solid 2px #0282F9;
+  padding: 15px
+}
