@@ -1,26 +1,14 @@
 import LogoHeader from '../assets/img/dc-logo.png'
+import NavBar from './partials/NavBar';
 
-const Header = () => {
+const Header = (props) => {
+    const { links } = props
     return (
-        <header className='container'>
+        <header className='container p-0'>
             <figure>
                 <img src={LogoHeader} alt="Logo DC" />
             </figure>
-            <nav>
-                <ul>
-                    <li><a href="">characters</a></li>
-                    <li><a href="">comics</a></li>
-                    <li><a href="">Movies</a></li>
-                    <li><a href="">tv</a></li>
-                    <li><a href="">games</a></li>
-                    <li><a href="">collectibles</a></li>
-                    <li><a href="">videos</a></li>
-                    <li><a href="">fans</a></li>
-                    <li><a href="">news</a></li>
-                    <li><a href="">shop</a></li>
-                </ul>
-            </nav>
-
+            <NavBar links={links} />
         </header>
     )
 }

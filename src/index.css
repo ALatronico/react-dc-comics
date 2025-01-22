@@ -5,7 +5,6 @@
   font-family: "Open Sans", serif;
 }
 
-
 ul {
   list-style: none;
 
@@ -16,7 +15,6 @@ a {
 }
 
 /***UTILITIES***/
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -35,70 +33,137 @@ a {
   color: #057FF7
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 
 /***HEADER***/
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 120px;
+  padding: 0px;
 
-}
+  img {
+      width: 90px;
+  }
 
-header nav {
-  height: 100%;
-  display: flex;
-  align-items: center;
+  nav {
+      height: 100%;
+      display: flex;
+      align-items: center;
+  }
 
+  ul {
+      display: flex;
+      height: 100%;
+      align-items: center;
 
-}
+      li:hover a {
+          color: #0282F9;
+      }
 
-header ul {
-  display: flex;
-  height: 100%;
-  align-items: center;
-}
+      li:hover a::after {
+          content: '';
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          background-color: #0282F9;
+          height: 4px;
+      }
 
-header ul li {
-  margin-right: 25px;
-  height: 100%;
-}
+      li {
+          position: relative;
+          margin-right: 25px;
+          height: 100%;
 
-header ul li a {
-  color: #7B6658;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
+          a {
+              color: #7B6658;
+              font-weight: bold;
+              text-transform: uppercase;
+              font-size: 0.7rem;
+              height: 100%;
+              display: flex;
+              align-items: center;
 
-}
+          }
+      }
+  }
 
-header ul li:hover a {
-  color: #0282F9;
-  border-bottom: solid 5px #0282F9;
-
-}
-
-
-header img {
-  width: 90px;
 }
 
 /***MAIN***/
+/***JUMBOTRON***/
 
 main {
   background-color: #1C1C1C;
   color: white;
   padding: 30px 0;
+  padding-top: 0px;
+
+  div.container {
+      flex-wrap: wrap;
+  }
+
+  .card {
+      width: calc(100% / 6);
+      padding: 10px 10px;
+  }
+
+  .btn {
+      justify-content: center;
+
+      .blue-tag {
+          color: white;
+          background-color: #0282F9;
+          font-weight: bold;
+          font-size: 0.7rem;
+          padding: 7px 50px;
+          margin-top: -15px;
+      }
+  }
+
+  .blue-tag-series {
+      position: relative;
+      top: -587px;
+      font-size: 1.5rem;
+      color: white;
+      background-color: #0282F9;
+      font-weight: bold;
+      padding: 7px 25px;
+  }
+
+  #jumbotron {
+      background-image: url('../jumbotron.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 400px;
+      margin-bottom: 30px;
+      position: relative;
+
+  }
+
+  .card-image {
+      width: 185px;
+      height: 185px;
+      overflow: hidden;
+
+      img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+      }
+
+  }
+
+  p {
+      padding-top: 20px;
+  }
 }
 
-
 /***FOOTER***/
-
-
 footer h3 {
   color: white;
   font-size: 0.9rem;
@@ -108,11 +173,11 @@ footer h3 {
 
 footer li {
   padding: 0px;
-}
 
-footer li a {
-  color: #959595;
-  font-size: 0.6rem;
+  a {
+      color: #959595;
+      font-size: 0.6rem;
+  }
 }
 
 #merchandise {
@@ -124,12 +189,12 @@ section#merchandise div.container {
   justify-content: space-Around;
   align-items: center;
   padding: 30px 0;
-}
 
-section#merchandise div.container span {
-  color: white;
-  margin-left: -60px;
-  font-size: 0.8rem;
+  span {
+      color: white;
+      margin-left: -60px;
+      font-size: 0.8rem;
+  }
 }
 
 #footer-menu {
@@ -161,42 +226,52 @@ footer section#merchandise img {
 
 .footer-col-dc {
   overflow: hidden;
+
+  img {
+      position: relative;
+      top: -94px;
+  }
 }
 
-.footer-col-dc img {
-  position: relative;
-  top: -94px;
-}
 
 #cta {
   background-color: #303030;
-}
 
-#cta .container {
-  justify-content: space-between;
-  align-items: center;
-}
+  .container {
+      justify-content: space-between;
+      align-items: center;
+  }
 
-#cta div.footer-col ul {
-  justify-content: center;
-  align-items: center;
-}
+  div.footer-col ul {
+      justify-content: center;
+      align-items: center;
+  }
 
-#cta div.footer-col li {
-  padding: 10px 10px;
-  vertical-align: middle;
-}
+  div.footer-col li {
+      position: relative;
+      bottom: -2px;
+      padding: 10px 10px;
 
-#cta div.footer-col li:not(:first-child) {
-  position: relative;
-  bottom: -2px;
-}
 
-#cta div.footer-col li a h3 {
-  color: #0282F9;
+      a h3 {
+          color: #0282F9;
+      }
+  }
+
+  div.footer-col li:not(:first-child) {
+      position: relative;
+      bottom: -2px;
+  }
 }
 
 .sign-up h3 {
   border: solid 2px #0282F9;
   padding: 15px
+}
+
+#follow {
+  color: #0282F9;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
 }
